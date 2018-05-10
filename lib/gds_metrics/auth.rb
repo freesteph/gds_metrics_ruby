@@ -24,8 +24,10 @@ module GDS
 
       def authorized?(env)
         header = env.fetch("HTTP_AUTHORIZATION", "")
+        Rails.logger.info('PROMETHEUS: HEADER IS ' + header)
         token = header[/Bearer (.*)/i, 1]
-
+        Rails.logger.info('PROMETHEUS: TOKEN IS ' + token)
+        Rails.logger.info('PROMETHEUS: APPLICATION ID ' + config.application_id)
         token == config.application_id
       end
 
