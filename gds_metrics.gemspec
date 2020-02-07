@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/alphagov/gds_metrics_ruby"
   s.files       = ["README.md"] + Dir["lib/**/*.*"]
 
-  s.add_dependency "prometheus-client-mmap", "0.9.1"
+  s.add_dependency "prometheus-client-mmap", "0.10.0"
 
   s.add_development_dependency "govuk-lint", "3.6.0"
   s.add_development_dependency "pry", "0.11.3"
